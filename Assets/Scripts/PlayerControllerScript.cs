@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VanControllerScript : MonoBehaviour
+public class PlayerControllerScript : MonoBehaviour
 {
     private float speed = 5.0f;
-    private float turnSpeed = 45.0f;
+    public float turnSpeed = 90.0f;
     private float horizontalInput;
     private float forwardInput;
     // Start is called before the first frame update
@@ -19,7 +19,7 @@ public class VanControllerScript : MonoBehaviour
     {
         horizontalInput = Input.GetAxis("Horizontal");
         forwardInput = Input.GetAxis("Vertical");
-        //Move the Vehicle Forward
+        //Move the Player Forward
         transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardInput);
         transform.Rotate(Vector3.up, turnSpeed * horizontalInput * Time.deltaTime);
         //transform.Translate(Vector3.right * Time.deltaTime * turnSpeed * horizontalInput);
