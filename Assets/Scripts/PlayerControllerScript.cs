@@ -17,7 +17,7 @@ public class PlayerControllerScript : MonoBehaviour
     public float jumpForce = 60;
     private float horizontalInput;
     private float forwardInput;
-    private bool gameOver = false;
+    public bool gameOver = false;
     private bool onGround = true;
     
 

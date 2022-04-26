@@ -11,12 +11,13 @@ public class Conveyer : MonoBehaviour
     public ParticleSystem vaporParticles;
 
     private AudioSource asBox;
-
+    private PlayerControllerScript playerCtrl;
 
     void Start()
     {
         asBox = GetComponent<AudioSource>();
-        
+        playerCtrl = GameObject.Find("Banana Man").GetComponent<PlayerControllerScript>();
+
     }
 
     // Update is called once per frame
@@ -27,7 +28,7 @@ public class Conveyer : MonoBehaviour
 
     private void OnCollisionStay(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Conveyer"))
+        if (collision.gameObject.CompareTag("Conveyer") && playerCtrl.gameOver == false)
         {
             transform.Translate(Vector3.left * Time.deltaTime * speed);
         }
