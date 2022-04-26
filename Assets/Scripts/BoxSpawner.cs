@@ -7,22 +7,28 @@ public class BoxSpawner : MonoBehaviour
     public GameObject[] objectPrefabs;
     public float xPosition = 3.0f;
     public float zPosition = 3.0f;
-    private int spawnlimit = 0;
+    private int spawnCount = 0;
+    public int spawnLimit = 20;
+    private int instance = 0;
+    private int instanceLimit = 1;
+    public float x = 0;
+    public float y = 0;
+    public float z = 0;
+
 
     // Start is called before the first frame update
-    void OnTriggerStay(Collider other)
+    void OnTriggerEnter(Collider other)
     {
-        spawnlimit = spawnlimit + 1;
-        if (spawnlimit < 20)
+        
+        if (instance < instanceLimit)
         {
-            InvokeRepeating("SpawnObjects", 0.5f, 0.0f);
+            InvokeRepeating("SpawnObjects", 0.5f, 1.0f);
+            instance = instance + 1;
         }
         else
         {
 
         }
-        
-
     }
 
     void Start()
@@ -38,10 +44,16 @@ public class BoxSpawner : MonoBehaviour
 
     void SpawnObjects()
     {
-        float randXPos = Random.Range(-xPosition, xPosition);
-        float randZPos = Random.Range(-zPosition, zPosition);
-        int objectPrefabsIndex = Random.Range(0, objectPrefabs.Length);
-        Vector3 randPos = new Vector3(7 + randXPos, 10 , -2 + randZPos);
-        Instantiate(objectPrefabs[objectPrefabsIndex], randPos, transform.rotation);
+        if (spawnCount < spawnLimit)
+        {
+            float randXPos = Random.Range(-xPosition, xPosition);
+            float randZPos = Random.Range(-zPosition, zPosition);
+            int objectPrefabsIndex = Random.Range(0, objectPrefabs.Length);
+            Vector3 randPos = new Vector3(7 + randXPos, 10, -2 + randZPos);
+            Instantiate(objectPrefabs[objectPrefabsIndex], randPos, transform.rotation);
+            spawnCount = spawnCount + 1;
+        }
+        
+
     }
 }
