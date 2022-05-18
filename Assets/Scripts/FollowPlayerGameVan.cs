@@ -15,13 +15,13 @@ public class FollowPlayerGameVan : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Cursor.visible = false;
-        //Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
 
     }
 
     // Update is called once per frame
-    void LateUpdate()
+    void Update()
     {
         CamControl();
 
@@ -30,9 +30,9 @@ public class FollowPlayerGameVan : MonoBehaviour
     void CamControl()
     {
         //transform.position = player.transform.position + offset;
-        mX += Input.GetAxis("Mouse X") * RotationSpeed;
+        mX += Input.GetAxis("Mouse X") * RotationSpeed * 2;
 
-        mY -= Input.GetAxis("Mouse Y") * RotationSpeed;
+        mY -= Input.GetAxis("Mouse Y") * RotationSpeed * 2;
         //mY = Mathf.Clamp(mY, -35, 60);
 
         //transform.Rotate(-mY, mX, 0f);

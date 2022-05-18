@@ -8,6 +8,9 @@ TagManager:
   - Poison
   - Ground
   - Conveyer
+  - Bullet
+  - PowerUp
+  - PlayerBullet
   layers:
   - Default
   - TransparentFX

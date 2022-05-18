@@ -11,9 +11,9 @@ public class BoxSpawner : MonoBehaviour
     public int spawnLimit = 20;
     private int instance = 0;
     private int instanceLimit = 1;
-    public float x = 0;
-    public float y = 0;
-    public float z = 0;
+    public float offsetX = 7.0f;
+    public float offsetY = 10.0f;
+    public float offsetZ = -2.0f;
 
 
     // Start is called before the first frame update
@@ -49,7 +49,8 @@ public class BoxSpawner : MonoBehaviour
             float randXPos = Random.Range(-xPosition, xPosition);
             float randZPos = Random.Range(-zPosition, zPosition);
             int objectPrefabsIndex = Random.Range(0, objectPrefabs.Length);
-            Vector3 randPos = new Vector3(7 + randXPos, 10, -2 + randZPos);
+            Vector3 randPos = new Vector3(transform.position.x + offsetX + randXPos, transform.position.y + offsetY,
+                transform.position.z + offsetZ+ randZPos);
             Instantiate(objectPrefabs[objectPrefabsIndex], randPos, transform.rotation);
             spawnCount = spawnCount + 1;
         }

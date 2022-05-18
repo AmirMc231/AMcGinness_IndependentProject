@@ -30,7 +30,7 @@ public class Conveyer : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Conveyer") && playerCtrl.gameOver == false)
         {
-            transform.Translate(Vector3.left * Time.deltaTime * speed);
+            transform.Translate(Vector3.forward * Time.deltaTime * speed);
         }
     }
 
