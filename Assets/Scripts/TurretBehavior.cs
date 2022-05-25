@@ -23,6 +23,7 @@ public class TurretBehavior : MonoBehaviour
     public AudioClip breakSound;
     private AudioSource asTurret;
     public ParticleSystem vaporParticles;
+    public ParticleSystem gunFlash;
 
     // Start is called before the first frame update
     void Start()
@@ -68,7 +69,7 @@ public class TurretBehavior : MonoBehaviour
             if (soundInstance < 1) 
             { 
             Destroy(gameObject, 0.5f);
-            vaporParticles.Play();
+            Instantiate(vaporParticles);
             asTurret.PlayOneShot(breakSound, 1.0f);
             soundInstance = soundInstance + 1;
             }
@@ -81,6 +82,7 @@ public class TurretBehavior : MonoBehaviour
         {
             GameObject clone = Instantiate(bullet, gun.position, transform.rotation);
             clone.GetComponent<Rigidbody>().AddForce(head.forward * bulletSpeed);
+            Instantiate(gunFlash, gun.position, gun.transform.rotation);
             Destroy(clone, 10);
             shotCount = shotCount + 1;
         }

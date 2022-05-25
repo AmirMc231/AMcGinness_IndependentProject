@@ -652,6 +652,7 @@ MonoBehaviour:
   burstInterval: 1.5
   breakSound: {fileID: 8300000, guid: 4bcde6de2166e41e284ec46d8a01fb90, type: 3}
   vaporParticles: {fileID: 2117553529706475494, guid: 2dc167b1f70be54418b75e09a56f281b, type: 3}
+  gunFlash: {fileID: 7516004826788876446, guid: fe8624b8239b6d44e8dba978b745de2a, type: 3}
 --- !u!54 &4394312760196241459
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -19,16 +19,12 @@ public class BoxSpawner : MonoBehaviour
     // Start is called before the first frame update
     void OnTriggerEnter(Collider other)
     {
-        
-        if (instance < instanceLimit)
-        {
+        if (other.gameObject.CompareTag("Player") && instance < instanceLimit) 
+        { 
             InvokeRepeating("SpawnObjects", 0.5f, 1.0f);
             instance = instance + 1;
         }
-        else
-        {
-
-        }
+        
     }
 
     void Start()

@@ -11,6 +11,7 @@ TagManager:
   - Bullet
   - PowerUp
   - PlayerBullet
+  - PickUp
   layers:
   - Default
   - TransparentFX
@@ -18,8 +19,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Ground
+  - PickUp
   - 
   - 
   - 

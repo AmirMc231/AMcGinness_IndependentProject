@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: -4045101241480242425}
   - component: {fileID: -2746479317813326544}
   - component: {fileID: 5768307619581099038}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WoodenBox
-  m_TagString: Ground
+  m_TagString: PickUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,10 +110,10 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 5
   m_Drag: 0.5
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0.5
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &-2746479317813326544
