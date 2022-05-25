@@ -130,7 +130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   boxHazard: Poison
-  breakSound: {fileID: 8300000, guid: e7ee25a47d63b46cdaf65480d62b405c, type: 3}
+  breakSound: {fileID: 8300000, guid: b5318ed5d641a594ba994c72a5dc8a2a, type: 3}
   vaporParticles: {fileID: 683588565588481584}
 --- !u!82 &-5773263334571614603
 AudioSource:

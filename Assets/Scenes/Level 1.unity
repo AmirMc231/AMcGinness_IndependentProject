@@ -1405,15 +1405,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3060749385161641018, guid: 59b118ccd1a0576498646319f6b036d5, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.058190994
+      value: 0.05819101
       objectReference: {fileID: 0}
     - target: {fileID: 3060749385161641018, guid: 59b118ccd1a0576498646319f6b036d5, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.17927064
+      value: 0.17927063
       objectReference: {fileID: 0}
     - target: {fileID: 3060749385161641018, guid: 59b118ccd1a0576498646319f6b036d5, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.010622933
+      value: -0.010622939
       objectReference: {fileID: 0}
     - target: {fileID: 3060749385161641019, guid: 59b118ccd1a0576498646319f6b036d5, type: 3}
       propertyPath: m_Lens.m_SensorSize.x
@@ -2963,6 +2963,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -29.856
       objectReference: {fileID: 0}
+    - target: {fileID: 8695800618643175088, guid: 609ad410c2cb82045a75d7caddbb8caa, type: 3}
+      propertyPath: breakSound
+      value: 
+      objectReference: {fileID: 8300000, guid: b5318ed5d641a594ba994c72a5dc8a2a, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 609ad410c2cb82045a75d7caddbb8caa, type: 3}
 --- !u!1 &1183642380

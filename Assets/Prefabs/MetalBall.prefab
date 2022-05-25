@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7957741635472336252}
   - component: {fileID: 7957741635472336243}
   - component: {fileID: 7957741635472336242}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MetalBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}

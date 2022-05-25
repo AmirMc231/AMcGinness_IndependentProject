@@ -21,6 +21,7 @@ public class TurretBehavior : MonoBehaviour
     private int encounter = 0;
     private int soundInstance = 0;
     public AudioClip breakSound;
+    public AudioClip gunSound;
     private AudioSource asTurret;
     public ParticleSystem vaporParticles;
     public ParticleSystem gunFlash;
@@ -85,6 +86,7 @@ public class TurretBehavior : MonoBehaviour
             Instantiate(gunFlash, gun.position, gun.transform.rotation);
             Destroy(clone, 10);
             shotCount = shotCount + 1;
+            asTurret.PlayOneShot(gunSound, 1.0f);
         }
         else
         {
