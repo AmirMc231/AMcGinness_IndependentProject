@@ -1743,6 +1743,18 @@ PrefabInstance:
       propertyPath: m_LookAt
       value: 
       objectReference: {fileID: 1066902036}
+    - target: {fileID: 3060749384610915392, guid: 59b118ccd1a0576498646319f6b036d5, type: 3}
+      propertyPath: m_XAxis.m_MaxSpeed
+      value: 900
+      objectReference: {fileID: 0}
+    - target: {fileID: 3060749384610915392, guid: 59b118ccd1a0576498646319f6b036d5, type: 3}
+      propertyPath: m_YAxis.m_MaxSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3060749384610915392, guid: 59b118ccd1a0576498646319f6b036d5, type: 3}
+      propertyPath: m_Lens.m_SensorSize.x
+      value: 1.4258621
+      objectReference: {fileID: 0}
     - target: {fileID: 3060749385161641018, guid: 59b118ccd1a0576498646319f6b036d5, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.2970045
